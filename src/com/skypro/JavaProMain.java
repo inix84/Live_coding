@@ -1,6 +1,6 @@
 package com.skypro;
-
 import com.skypro.account.v2.Account;
+import com.skypro.account.v4.TransferUtil;
 
 public class JavaProMain {
     public static void main(String[] args) {
@@ -60,7 +60,6 @@ public class JavaProMain {
         System.out.println(petr.name + " имеет " + petr.balace);
     }
 
-
     private static void transferMoneyV3() {
         System.out.println("JavaProMain.transferMoneyV3");
         // создадим пару аккуантов
@@ -86,11 +85,10 @@ public class JavaProMain {
         System.out.println(ivan);
         System.out.println(petr);
         int transferMoney = 20;
-        System.out.println(ivan.getName() + " перечисляет " + petr.getName() + " " + transferMoney);
-        ivan.changeBalance(- transferMoney);
-        petr.changeBalance(transferMoney);
+        //ivan.changeBalance(transferMoney); // этот метод стал не публичный, а дефолтный (внутри пакетный)
+        TransferUtil.transferMoney(ivan,petr,transferMoney); // контр и левая кнопка мыши, перекинет в этот метод
+
         System.out.println(ivan);
         System.out.println(petr);
     }
-36 минут видео ( номер 1)
 }
