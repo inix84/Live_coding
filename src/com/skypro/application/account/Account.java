@@ -39,5 +39,6 @@ public class Account {
         if (balace + amount < 0) {
             throw new TransactionException(name); // пишем свое исключение, а внутри имя человека у кот нету денег
         }
+        balace=balace+amount;
     }
 }
