@@ -35,6 +35,7 @@ public class JavaProMain {
         System.out.println("есть 1? = " + strings.contains("1")); // проверяет наличие элемента в составе коллекции
         System.out.println("есть 5? = " + strings.contains("5"));
 
+
         List<Cat> cats = new ArrayList<>(List.of(new Cat("white", "Pet"), new Cat("black", "Vas")));
         Arrays.asList(); // тоже будет давать неизменяемый лист
         System.out.println("есть Пет белый? = " + cats.contains(new Cat("white", "Pet")));
